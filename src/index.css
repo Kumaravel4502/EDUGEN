@@ -1,0 +1,126 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+
+/* .banner {
+  background-image: url("https://demo.themeies.com/edugen/wp-content/uploads/2024/09/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.sub-title {
+  background: var(
+    --Gradient,
+    linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%)
+  );
+  background-clip: text;
+  font-weight: 700;
+  color: transparent;
+}
+
+.sub-titlecontent {
+  background: var(
+    --Gradient,
+    linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.Exp {
+  background: var(
+    --Gradient,
+    linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%)
+  );
+
+  font-weight: 700;
+}
+
+.video {
+  /* background-image: url('https://demo.themeies.com/edugen/wp-content/uploads/2024/10/video1-scaled-1.jpg'); */
+  height: 80vh;
+  background-repeat: no-repeat;
+}
+
+.faq-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #8a47cb;
+  /* background-image: linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.faq-button svg {
+  height: 1.5em;
+  fill: white;
+}
+
+:hover.butt {
+  background-image: linear-gradient(100deg, #0063f4 7.82%, #00f0aa 87.12%);
+}
+
+.input-wrapper {
+  width: fit-content;
+  height: 45px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-right: 40px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.icon {
+  width: 30px;
+  fill: rgb(0, 0, 0);
+  margin-left: 8px;
+  transition: all 0.3s;
+}
+.input {
+  max-width: 190px;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1.3em;
+}
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+  -webkit-text-fill-color: #ffffff;
+}
+.Subscribe-btn {
+  height: 100%;
+  width: 150px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  font-weight: 500;
+  overflow: hidden;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.input-wrapper:active .icon {
+  transform: scale(1.3);
+}
+
+.Subscribe-btn:active {
+  transform: scale(0.9);
+}
+
+.text1 {
+  font-family: "Lexend", serif;
+}
