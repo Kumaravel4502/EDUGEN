@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6  ">
         <div className="md:flex md:justify-between gap-20">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="#" className="flex items-center">
               <img
                 src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/white-logo.svg"
                 className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white   h-25 "
@@ -19,42 +19,27 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-semibold ">
                 <li className="mb-4 ">
-                  <a
-                    href="https://flowbite.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Home
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     About
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Courses
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://flowbite.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     News
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Contact
                   </a>
                 </li>
@@ -82,26 +67,17 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://flowbite.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Payment Method
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Privacy Policy
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:text-[#8A47CB]"
-                  >
+                  <a href="#" className="hover:text-[#8A47CB]">
                     Licensing
                   </a>
                 </li>
@@ -137,7 +113,7 @@ const Footer = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="#" className="hover:underline">
               EDUGEN
             </a>
             . All Rights Reserved.
