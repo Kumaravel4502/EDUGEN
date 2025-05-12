@@ -1,17 +1,26 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const dropdownItems = {
   pages: [
-    "About Us",
-    "Our Team",
-    "Team Details",
-    "Privacy Policy",
-    "Terms & Conditions",
-    "404 Page",
+    { name: "AboutUs", path: "/about-us" },
+    { name: "Our Team", path: "/our-team" },
+    { name: "Team Details", path: "/team-details" },
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms & Conditions", path: "/terms-conditions" },
+    { name: "404 Page", path: "/not-found" },
   ],
-  courses: ["Course Grid", "Course List", "Course Details"],
-  blog: ["Blog Standard", "Blog Grid", "Blog Details"],
+  courses: [
+    { name: "Course Grid", path: "/course-grid" },
+    { name: "Course List", path: "/course-list" },
+    { name: "Course Details", path: "/course-details" },
+  ],
+  blog: [
+    { name: "Blog Standard", path: "/blog-standard" },
+    { name: "Blog Grid", path: "/blog-grid" },
+    { name: "Blog Details", path: "/blog-details" },
+  ],
 };
 
 const NavBar = () => {
@@ -34,59 +43,54 @@ const NavBar = () => {
       <div className="2xl:container mx-auto pt-2">
         <div className="w-[90%] mx-auto flex justify-between items-center gap-10">
           {/* Logo */}
-          <div>
+          <Link to="/">
             <img
               src="https://ik.imagekit.io/ixthr16gh/Intern-Work/Logo.png"
               alt="Logo"
               className="w-[125px] h-10"
             />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex justify-between items-center gap-[20px] text-[18px] font-bold cursor-pointer">
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <Link to="/">
               <li className="list-none hover:text-[#8A47CB] transition-all duration-300 ease-in-out">
                 Home
               </li>
-            </a>
+            </Link>
 
-            {["pages", "courses", "blog"].map((item) => (
+            {Object.entries(dropdownItems).map(([key]) => (
               <div
-                key={item}
+                key={key}
                 className="relative"
                 onMouseEnter={() =>
-                  setDropdown((prev) => ({ ...prev, [item]: true }))
+                  setDropdown((prev) => ({ ...prev, [key]: true }))
                 }
                 onMouseLeave={() =>
-                  setDropdown((prev) => ({ ...prev, [item]: false }))
+                  setDropdown((prev) => ({ ...prev, [key]: false }))
                 }
               >
-                <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className="flex items-center"
-                >
+                <div className="flex items-center cursor-pointer">
                   <li className="list-none hover:text-[#8A47CB] capitalize transition-all duration-300 ease-in-out">
-                    {item}
+                    {key}
                   </li>
                   <ChevronDown
                     className={`ml-1 text-[#8A47CB] transition-transform duration-300 ${
-                      dropdown[item] ? "rotate-180" : ""
+                      dropdown[key] ? "rotate-180" : ""
                     }`}
                     size={16}
                   />
-                </a>
-                {dropdown[item] && (
+                </div>
+                {dropdown[key] && (
                   <ul className="absolute top-full left-0 bg-white shadow-xl rounded-md mt-2 w-48 py-2 z-20 animate-fade-in">
-                    {dropdownItems[item].map((subItem, index) => (
+                    {dropdownItems[key].map(({ name, path }, index) => (
                       <li key={index}>
-                        <a
-                          href="#"
-                          onClick={(e) => e.preventDefault()}
+                        <Link
+                          to={path}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-all duration-300 ease-in-out"
                         >
-                          {subItem}
-                        </a>
+                          {name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -94,11 +98,11 @@ const NavBar = () => {
               </div>
             ))}
 
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <Link to="/contact">
               <li className="list-none hover:text-[#8A47CB] transition-all duration-300 ease-in-out">
                 Contact
               </li>
-            </a>
+            </Link>
           </nav>
 
           {/* Hamburger Icon */}
@@ -149,9 +153,11 @@ const NavBar = () => {
           }`}
         >
           <ul className="flex flex-col space-y-4 text-center font-semibold text-gray-800">
-            <li className="py-3 border-b border-gray-200 text-md font-bold transition-all duration-300">
-              Home
-            </li>
+            <Link to="/" onClick={() => setShow(false)}>
+              <li className="py-3 border-b border-gray-200 text-md font-bold transition-all duration-300">
+                Home
+              </li>
+            </Link>
 
             {Object.entries(dropdownItems).map(([key, values]) => (
               <div
@@ -176,21 +182,26 @@ const NavBar = () => {
                 {dropdown[key] && (
                   <ul className="bg-white px-4 py-2 space-y-2 border-t border-gray-100 animate-fade-in">
                     {values.map((item, index) => (
-                      <li
+                      <Link
+                        to={item.path}
                         key={index}
-                        className="text-sm py-2 border-b border-gray-100 hover:bg-[#f0ebff] hover:text-[#8A47CB] transition-all rounded-md"
+                        onClick={() => setShow(false)}
                       >
-                        {item}
-                      </li>
+                        <li className="text-sm py-2 border-b border-gray-100 hover:bg-[#f0ebff] hover:text-[#8A47CB] transition-all rounded-md">
+                          {item.name}
+                        </li>
+                      </Link>
                     ))}
                   </ul>
                 )}
               </div>
             ))}
 
-            <li className="py-3 border-t border-gray-200 text-md font-bold transition-all duration-300">
-              Contact
-            </li>
+            <Link to="/contact" onClick={() => setShow(false)}>
+              <li className="py-3 border-t border-gray-200 text-md font-bold transition-all duration-300">
+                Contact
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

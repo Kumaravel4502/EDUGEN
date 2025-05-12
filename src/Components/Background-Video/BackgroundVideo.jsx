@@ -1,4 +1,15 @@
+/* eslint-disable no-unused-vars */
+import { useState } from "react";
+
 const BackgroundVideo = () => {
+ 
+  const [spinSpeed, setSpinSpeed] = useState(10);
+
+  // Function to dynamically update the spinning speed
+  // const handleSpeedChange = (e) => {
+  //   setSpinSpeed(e.target.value);
+  // };
+
   return (
     <section>
       <div className="2xl:container mx-auto mt-10 mb-15 rounded-3xl relative">
@@ -24,15 +35,19 @@ const BackgroundVideo = () => {
 
           {/* Video Button Container */}
           <div className="absolute inset-0 flex justify-end items-center pr-8 sm:pr-12 md:pr-16 lg:pr-20">
-            <div className="relative">
+            <div
+              className="relative round"
+              style={{
+                animation: `spin ${spinSpeed}s linear infinite`, // Dynamic animation speed
+              }}
+            >
               <img
                 src="https://demo.themeies.com/edugen/wp-content/uploads/2024/10/video-shapessx.svg"
                 alt=""
-                className="w-[160px] sm:w-[220px] md:w-[300px] lg:w-[360px] background-Animation "
+                className="w-[160px] sm:w-[220px] md:w-[300px] lg:w-[360px] background-Animation"
               />
               <div className="absolute inset-0 flex justify-center items-center">
                 <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I">
-                  {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -52,6 +67,24 @@ const BackgroundVideo = () => {
           </div>
         </div>
       </div>
+
+      {/* Dynamic Speed Control */}
+      {/* <div className="mt-4 text-center">
+        <label htmlFor="speed" className="text-xl font-semibold">
+          Spinning Speed (Seconds):
+        </label>
+        <input
+          type="range"
+          id="speed"
+          min="1"
+          max="20"
+          step="0.5"
+          value={spinSpeed}
+          onChange={handleSpeedChange}
+          className="w-full mt-2"
+        />
+        <span className="block mt-2">{spinSpeed}s</span>
+      </div> */}
     </section>
   );
 };

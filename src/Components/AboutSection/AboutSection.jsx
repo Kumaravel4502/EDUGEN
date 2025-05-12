@@ -1,4 +1,23 @@
+import { useState, useEffect } from "react";
+
 const AboutSection = () => {
+  const [yearsOfExperience, setYearsOfExperience] = useState(0);
+  const targetYears = 15;
+
+  useEffect(() => {
+    let start = 0;
+    const interval = setInterval(() => {
+      if (start < targetYears) {
+        start++;
+        setYearsOfExperience(start);
+      } else {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [targetYears]);
+
   return (
     <section className="py-16 md:py-24 lg:py-32 overflow-hidden">
       <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +51,9 @@ const AboutSection = () => {
 
                   <div className="mt-6 Exp p-6 rounded-2xl text-white">
                     <div className="flex justify-between items-start">
-                      <span className="text-4xl md:text-5xl font-bold">15</span>
+                      <span className="text-4xl md:text-5xl font-bold">
+                        {yearsOfExperience}
+                      </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 48 48"
