@@ -38,6 +38,9 @@ import TeamDetails from "./Components/TeamDetails/TeamDetails";
 import OurTeamMembers from "./Components/OurTeamMember/OurTeamMember";
 import TeamMemberDetail from "./Components/TeamDetails/TeamDetails";
 import { TeamProvider } from "./context/TeamContext";
+import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
+import TermsCondition from "./Components/Termsonditions/TermsCondition";
+import NotFound from "./Components/NotFound/NotFound";
 
 const HomePage = () => {
   return (
@@ -71,8 +74,9 @@ const Router = createBrowserRouter([
       { path: "/our-team", element: <OurTeamMembers /> },
       { path: "/our-team/:id", element: <TeamMemberDetail /> },
       { path: "/team-details", element: <TeamDetails /> },
-      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
-      // { path: "/terms-conditions", element: <TermsConditions /> },
+      { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      { path: "/terms-conditions", element: <TermsCondition /> },
+        { path: "*", element: <NotFound /> },
       { path: "/contact", element: <Contact /> },
 
       // { path: "/course-grid", element: <CourseGrid /> },

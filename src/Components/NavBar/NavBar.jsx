@@ -6,7 +6,7 @@ const dropdownItems = {
   pages: [
     { name: "AboutUs", path: "/about-us" },
     { name: "Our Team", path: "/our-team" },
-    { name: "Team Details", path: "/team-details" },
+    // { name: "Team Details", path: "/team-details" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms & Conditions", path: "/terms-conditions" },
     { name: "404 Page", path: "/not-found" },
