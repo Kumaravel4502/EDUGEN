@@ -3,6 +3,28 @@ import TeamMembers from "../TeamMembers/TeamMembers";
 import App from "../Testimonials/Testimonial";
 
 const AboutUs = () => {
+  const ListItem = [
+    {
+      img: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg",
+      text: "Digital skill empowerment",
+    },
+    {
+      text: "Expert-led courses",
+      img: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg",
+    },
+    {
+      text: "Career guidance",
+      img: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg",
+    },
+    {
+      text: "Supportive learning",
+      img: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg",
+    },
+    {
+      text: "Life-changing digital education",
+      img: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg",
+    },
+  ];
   return (
     <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8 -mt-12">
       <div className="relative bg-[#FFF7FA] pt-20 pb-12 sm:pt-24 sm:pb-14 md:pt-28 md:pb-16 lg:pt-32 lg:pb-18 overflow-hidden rounded-xl">
@@ -81,6 +103,7 @@ const AboutUs = () => {
               </div>
 
               {/* Right Section - Content */}
+
               <div className="md:w-1/2 mt-12 md:mt-0">
                 <div className="space-y-6">
                   {/* Header */}
@@ -105,63 +128,24 @@ const AboutUs = () => {
                   <div className="space-y-4">
                     <div className="space-y-4 text-gray-600 font-semibold text-lg">
                       <ul className="space-y-6 text-black">
-                        <li className="flex items-center gap-2 text-2xl">
-                          <img
-                            decoding="async"
-                            width="25"
-                            height="25"
-                            src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg"
-                            alt=""
-                          ></img>
-                          <p>Digital skill empowerment</p>
-                        </li>
-                        <li className="flex items-center gap-2 text-2xl">
-                          <img
-                            decoding="async"
-                            width="25"
-                            height="25"
-                            src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg"
-                            alt=""
-                          ></img>
-                          <p>Expert-led courses</p>
-                        </li>
-                        <li className="flex items-center gap-2 text-2xl">
-                          <img
-                            decoding="async"
-                            width="25"
-                            height="25"
-                            src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg"
-                            alt=""
-                          ></img>
-                          <p>Career-focused education</p>
-                        </li>
-                        <li className="flex items-center gap-2 text-2xl">
-                          <img
-                            decoding="async"
-                            width="25"
-                            height="25"
-                            src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg"
-                            alt=""
-                          ></img>
-                          <p>Supportive learning</p>
-                        </li>
-                        <li className="flex items-center gap-2 text-2xl">
-                          <img
-                            decoding="async"
-                            width="25"
-                            height="25"
-                            src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/check.svg"
-                            alt=""
-                          ></img>
-                          <p>Life-changing digital education</p>
-                        </li>
+                        {ListItem.map((item, index) => (
+                          <li
+                            key={index}
+                            className="flex items-center gap-2 text-2xl"
+                          >
+                            <img
+                              decoding="async"
+                              width="25"
+                              height="25"
+                              src={item.img}
+                              alt=""
+                            />
+                            <p>{item.text}</p>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
-
-                  {/* <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-                
-                  </div> */}
                 </div>
                 {/* Another right section */}
                 <div className="md:w-4/4 mt-12 md:mt-7 bg-white rounded-2xl shadow-xl hover:-translate-y-2 duration-700">
@@ -208,7 +192,7 @@ const AboutUs = () => {
         </div>
         <Choose />
         <App />
-        <TeamMembers />
+        <TeamMembers  />
       </section>
     </div>
   );
