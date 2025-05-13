@@ -181,25 +181,6 @@ const AboutUs = () => {
                   </div>
                 </div>
 
-                {/* <div className="flex items-start space-x-4 p-3 mb-15 mt-15 ">
-                  <div className="rounded-full bg-white shadow-md p-5 group-hover:bg-[#8A47CB] hover:-translate-y-5 duration-800 cursor-pointer">
-                    <img
-                      src="https://demo.themeies.com/edugen/wp-content/uploads/2024/09/video-play.svg"
-                      alt="Video Icon"
-                      className="w-8 h-8 sm:w-10 sm:h-10"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <h3 className="font-semibold text-xl">
-                      All Classes Video Provided
-                    </h3>
-                    <p className="w-74 font-medium text-gray-500">
-                      There are many variations of passages of but the majority
-                      have suffered.
-                    </p>
-                  </div>
-                </div> */}
-
                 <div className="flex items-start space-x-4 p-4 sm:p-5 lg:p-6 mb-8 mt-8">
                   {/* Icon Wrapper */}
                   <div className="rounded-full bg-white shadow-md p-5 transition-transform duration-500 hover:-translate-y-2 cursor-pointer ">
