@@ -1,7 +1,4 @@
-// Simulating API calls with the current data
-// In a real application, these would be actual API endpoints
 
-// Import the static data (temporary)
 import { TeamData2 } from "../API/TeamData";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
