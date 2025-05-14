@@ -223,4 +223,80 @@ export const TeamData2 = [
       }
     ]
   }
+  , {
+    id: 6,
+    name: "Adrian V. Ginsberg ",
+    position: "Senior Lecturer",
+    designation: "Lecturer",
+    description: "Professor & Chair of Department of Computer Science at Harvard University. Leads the elite research team.",
+    image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/team14.jpg",
+    email: "john.mack@example.com",
+    location: "422 Science Hall, Sydney",
+    linkedin: "https://www.linkedin.com/in/JohnMack/",
+    github: "https://github.com/JohnMack",
+    google: "https://www.google.com/search?q=JohnMack",
+    stats: {
+      students: 75,
+      programs: 30,
+      awards: 12
+    },
+    featuredCourses: [
+      {
+        id: 1,
+        title: "Introduction to Digital Marketing",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses1.jpg",
+
+        price: 27.00,
+        duration: "4h 30m",
+        lessons: 2.1,
+        rating: 4.5
+      },
+      {
+        id: 2,
+        title: "Full Stack Web Development Bootcamp",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses2.jpg",
+        price: 24.00,
+        duration: "4h 30m",
+        lessons: 2.1,
+        rating: 4.5
+      }
+    ]
+  }, {
+    id: 7,
+    name: "Daniel C. Almonte ",
+    position: "Professor",
+    designation: "Digital Marketing",
+    description: "Leading expert in digital marketing strategies and social media optimization. Passionate about helping students succeed in the digital world.",
+    image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/team15.jpg",
+    email: "tim.moyer@example.com",
+    location: "315 Marketing Hall, Sydney",
+    linkedin: "https://www.linkedin.com/in/TimRMoyer/",
+    github: "https://github.com/TimRMoyer",
+    google: "https://www.google.com/search?q=TimRMoyer",
+    stats: {
+      students: 52,
+      programs: 18,
+      awards: 12
+    },
+    featuredCourses: [
+      {
+        id: 3,
+        title: "Advanced Digital Marketing Strategies",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+        price: 29.00,
+        duration: "5h 45m",
+        lessons: 3.2,
+        rating: 4.8
+      },
+      {
+        id: 4,
+        title: "Social Media Marketing Mastery",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses4.jpg",
+        price: 32.00,
+        duration: "6h 15m",
+        lessons: 4.0,
+        rating: 4.7
+      }
+    ]
+  }
 ];
