@@ -19,7 +19,7 @@ import Contact from "./Components/Contact/Contact";
 // import BlogGrid from "./Components/Blog/BlogGrid";
 // import BlogDetails from "./Components/Blog/BlogDetails";
 
-// import NotFound from "./Components/Error/NotFound";
+import NotFound from "./Components/NotFound/NotFound";
 import CourseCategory from "./Components/CourseCategory/CourseCategory";
 import AboutSection from "./Components/AboutSection/AboutSection";
 import BackgroundVideo from "./Components/Background-Video/BackgroundVideo";
@@ -34,10 +34,12 @@ import Footer from "./Components/Footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./Components/Header/Header";
 // import OurTeam from "./Components/TeamSection/OurTeam";
-// import TeamDetails from "./Components/TeamDetails/TeamDetails";
-import OurTeamMembers from "./Components/OurTeamMember/OurTeamMember";
+import TeamDetails from "./Components/TeamDetails/TeamDetails";
 import TeamMemberDetail from "./Components/TeamDetails/TeamDetails";
+import OurTeamMembers from "./Components/OurTeamMember/OurTeamMember";
 import { TeamProvider } from "./context/TeamContext";
+import { LoadingProvider } from "./context/LoadingContext";
+import RouteWrapper from "./Components/RouteWrapper/RouteWrapper";
 
 const HomePage = () => {
   return (
@@ -67,13 +69,13 @@ const Router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/about-us", element: <AboutUs /> },
-      { path: "/our-team", element: <OurTeamMembers /> },
-      { path: "/our-team/:id", element: <TeamMemberDetail /> },
-      { path: "/team-details", element: <TeamDetails /> },
+      { path: "/about-us", element: <RouteWrapper><AboutUs /></RouteWrapper> },
+      { path: "/our-team", element: <RouteWrapper><OurTeamMembers /></RouteWrapper> },
+      { path: "/our-team/:id", element: <RouteWrapper><TeamMemberDetail /></RouteWrapper> },
+      { path: "/team-details", element: <RouteWrapper><TeamDetails /></RouteWrapper> },
       // { path: "/privacy-policy", element: <PrivacyPolicy /> },
       // { path: "/terms-conditions", element: <TermsConditions /> },
-      { path: "/contact", element: <Contact /> },
+      { path: "/contact", element: <RouteWrapper><Contact /></RouteWrapper> },
 
       // { path: "/course-grid", element: <CourseGrid /> },
       // { path: "/course-list", element: <CourseList /> },
