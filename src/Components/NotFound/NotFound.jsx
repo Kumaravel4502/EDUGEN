@@ -9,7 +9,7 @@ const NotFound = () => {
         setIsVisible(true);
         window.scrollTo(0, 0);
 
-        // Track window resize for better responsiveness
+      
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
@@ -18,21 +18,21 @@ const NotFound = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Dynamic padding based on screen width
+   
     const getContainerClasses = () => {
-        // Extra responsive padding based on exact screen width
+   
         if (windowWidth < 380) {
-            return "px-3 py-4 min-h-[calc(100vh-60px)]"; // Extra small devices
+            return "px-3 py-4 min-h-[calc(100vh-60px)]"; 
         } else if (windowWidth < 640) {
-            return "px-4 py-6 min-h-[calc(100vh-70px)]"; // Small mobile
+            return "px-4 py-6 min-h-[calc(100vh-70px)]"; 
         } else if (windowWidth < 768) {
-            return "px-6 py-8 min-h-[calc(100vh-80px)]"; // Large mobile / small tablet
+            return "px-6 py-8 min-h-[calc(100vh-80px)]"; 
         } else if (windowWidth < 1024) {
-            return "px-8 py-10 min-h-[calc(100vh-80px)]"; // Tablets
+            return "px-8 py-10 min-h-[calc(100vh-80px)]"; 
         } else if (windowWidth < 1280) {
-            return "px-10 py-12 min-h-[calc(100vh-80px)]"; // Small desktops
+            return "px-10 py-12 min-h-[calc(100vh-80px)]"; 
         } else {
-            return "px-12 py-16 min-h-[calc(100vh-80px)]"; // Large desktops
+            return "px-12 py-16 min-h-[calc(100vh-80px)]";
         }
     };
 
@@ -104,8 +104,6 @@ const NotFound = () => {
                                     Go to Our Team
                                 </Link>
                             </div>
-
-                            {/* Navigation links are commented out as per user's modification */}
                         </div>
                     </div>
                 </div>
