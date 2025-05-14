@@ -38,11 +38,6 @@ import Header from "./Components/Header/Header";
 import OurTeamMembers from "./Components/OurTeamMember/OurTeamMember";
 import TeamMemberDetail from "./Components/TeamDetails/TeamDetails";
 import { TeamProvider } from "./context/TeamContext";
-import { LoadingProvider } from "./context/LoadingContext";
-import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
-import TermsCondition from "./Components/Termsonditions/TermsCondition";
-import NotFound from "./Components/NotFound/NotFound";
-import RouteWrapper from "./Components/RouteWrapper/RouteWrapper";
 
 const HomePage = () => {
   return (
@@ -72,13 +67,13 @@ const Router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      { path: "/about-us", element: <RouteWrapper><AboutUs /></RouteWrapper> },
-      { path: "/our-team", element: <RouteWrapper><OurTeamMembers /></RouteWrapper> },
-      { path: "/our-team/:id", element: <RouteWrapper><TeamMemberDetail /></RouteWrapper> },
-      // { path: "/team-details", element: <TeamDetails /> },
-      { path: "/privacy-policy", element: <RouteWrapper><PrivacyPolicy /></RouteWrapper> },
-      { path: "/terms-conditions", element: <RouteWrapper><TermsCondition /></RouteWrapper> },
-      { path: "/contact", element: <RouteWrapper><Contact /></RouteWrapper> },
+      { path: "/about-us", element: <AboutUs /> },
+      { path: "/our-team", element: <OurTeamMembers /> },
+      { path: "/our-team/:id", element: <TeamMemberDetail /> },
+      { path: "/team-details", element: <TeamDetails /> },
+      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
+      // { path: "/terms-conditions", element: <TermsConditions /> },
+      { path: "/contact", element: <Contact /> },
 
       // { path: "/course-grid", element: <CourseGrid /> },
       // { path: "/course-list", element: <CourseList /> },
