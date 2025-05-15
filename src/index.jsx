@@ -1,45 +1,39 @@
 import ReactDOM from "react-dom/client";
 import "../src/index.css";
-
-import Layout from "./Components/Layout/Layout"; // new layout
-import AboutUs from "./Components/AboutUsPage/AboutUs";
-import Contact from "./Components/Contact/Contact";
-// import TeamMemberDetail2 from "./Components/TeamMembers/TeamMemberDetail2";
-
-// Add other pages as needed:
-
-
-// import TermsConditions from "./Components/AboutUsPage/TermsConditions";
-
-// import CourseGrid from "./Components/Course/CourseGrid";
-// import CourseList from "./Components/Course/CourseList";
-// import CourseDetails from "./Components/Course/CourseDetails";
-
-// import BlogStandard from "./Components/Blog/BlogStandard";
-// import BlogGrid from "./Components/Blog/BlogGrid";
-// import BlogDetails from "./Components/Blog/BlogDetails";
-
-import NotFound from "./Components/NotFound/NotFound";
-import CourseCategory from "./Components/CourseCategory/CourseCategory";
-import AboutSection from "./Components/AboutSection/AboutSection";
-import BackgroundVideo from "./Components/Background-Video/BackgroundVideo";
-import Course from "./Components/Course/Course";
-import Choose from "./Components/Choose/Choose";
-import TeamMembers from "./Components/TeamMembers/TeamMembers";
-import Email from "./Components/Email/Email";
-import Testimonial from "./Components/Testimonials/Testimonial";
-import LiveClasses from "./Components/LiveClasses/LiveClasses";
-import Blog from "./Components/Blog/Blog";
-import Footer from "./Components/Footer/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Header from "./Components/Header/Header";
-// import OurTeam from "./Components/TeamSection/OurTeam";
-import TeamDetails from "./Components/TeamDetails/TeamDetails";
-import TeamMemberDetail from "./Components/TeamDetails/TeamDetails";
-import OurTeamMembers from "./Components/OurTeamMember/OurTeamMember";
 import { TeamProvider } from "./context/TeamContext";
 import { LoadingProvider } from "./context/LoadingContext";
-import RouteWrapper from "./Components/RouteWrapper/RouteWrapper";
+
+// Import all components from barrel file
+import {
+  Layout,
+  AboutUs,
+  Contact,
+  NotFound,
+  CourseCategory,
+  AboutSection,
+  BackgroundVideo,
+  Course,
+  Choose,
+  TeamMembers,
+  Email,
+  Testimonial,
+  LiveClasses,
+  Blog,
+  Footer,
+  Header,
+  TeamDetails,
+  OurTeamMember,
+  RouteWrapper,
+  PrivacyPolicy,
+  TermsCondition,
+  CourseGrid,
+  CourseList,
+  CourseDetails,
+  CourseCatalog,
+  BlogStandard,
+} from "./Components";
+import BlogGrid from "./Components/BlogGrid/BlogGrid";
 
 const HomePage = () => {
   return (
@@ -51,7 +45,7 @@ const HomePage = () => {
       <Course />
       <Choose />
       <TeamMembers />
-      {/* <OurTeamMembers /> */}
+      {/* <OurTeamMember /> */}
       <Email />
       <Testimonial />
       <LiveClasses />
@@ -70,22 +64,19 @@ const Router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "/about-us", element: <RouteWrapper><AboutUs /></RouteWrapper> },
-      { path: "/our-team", element: <RouteWrapper><OurTeamMembers /></RouteWrapper> },
-      { path: "/our-team/:id", element: <RouteWrapper><TeamMemberDetail /></RouteWrapper> },
+      { path: "/our-team", element: <RouteWrapper><OurTeamMember /></RouteWrapper> },
+      { path: "/our-team/:id", element: <RouteWrapper><TeamDetails /></RouteWrapper> },
       { path: "/team-details", element: <RouteWrapper><TeamDetails /></RouteWrapper> },
-      // { path: "/privacy-policy", element: <PrivacyPolicy /> },
-      // { path: "/terms-conditions", element: <TermsConditions /> },
+      { path: "/course-grid", element: <RouteWrapper><CourseGrid /></RouteWrapper> },
+      { path: "/course-list", element: <RouteWrapper><CourseList /></RouteWrapper> },
+      { path: "/course-details/:id", element: <RouteWrapper><CourseDetails /></RouteWrapper> },
+      { path: "/courses", element: <RouteWrapper><CourseCatalog /></RouteWrapper> },
+      { path: "/privacy-policy", element: <RouteWrapper><PrivacyPolicy /></RouteWrapper> },
+      { path: "/terms-conditions", element: <RouteWrapper><TermsCondition /></RouteWrapper> },
       { path: "/contact", element: <RouteWrapper><Contact /></RouteWrapper> },
-
-      // { path: "/course-grid", element: <CourseGrid /> },
-      // { path: "/course-list", element: <CourseList /> },
-      // { path: "/course-details", element: <CourseDetails /> },
-
-      // { path: "/blog-standard", element: <BlogStandard /> },
-      // { path: "/blog-grid", element: <BlogGrid /> },
-      // { path: "/blog-details", element: <BlogDetails /> },
+      { path: "/blog-standard", element: <RouteWrapper><BlogStandard /></RouteWrapper> },
+      { path: "/blog-grid", element: <RouteWrapper><BlogGrid /></RouteWrapper> },
       { path: "*", element: <RouteWrapper><NotFound /></RouteWrapper> },
-      // { path: "*", element: <NotFound /> },
     ],
   },
 ]);

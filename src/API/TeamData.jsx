@@ -300,3 +300,69 @@ export const TeamData2 = [
     ]
   }
 ];
+
+
+export const TeamData3 = [
+  {
+    featuredCourses: [
+      {
+        id: 1,
+        title: "Introduction to Digital Marketing",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses1.jpg",
+
+        price: 27.00,
+        duration: "4h 30m",
+        lessons: 2.1,
+        rating: 4.5
+      },
+      {
+        id: 2,
+        title: "Full Stack Web Development Bootcamp",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses2.jpg",
+        price: 24.00,
+        duration: "4h 30m",
+        lessons: 2.1,
+        rating: 4.5
+      },
+
+      {
+        id: 3,
+        title: "Advanced Digital Marketing Strategies",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+        price: 29.00,
+        duration: "5h 45m",
+        lessons: 3.2,
+        rating: 4.8
+      },
+      {
+        id: 4,
+        title: "Social Media Marketing Mastery",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses4.jpg",
+        price: 32.00,
+        duration: "6h 15m",
+        lessons: 4.0,
+        rating: 4.7
+      },
+      {
+        id: 5,
+        title: "Modern JavaScript Development",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses5.jpg",
+        price: 25.00,
+        duration: "4h 30m",
+        lessons: 2.5,
+        rating: 4.6
+      },
+      {
+        id: 6,
+        title: "React.js for Beginners",
+        image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses6.jpg",
+        price: 28.00,
+        duration: "5h 15m",
+        lessons: 3.0,
+        rating: 4.7
+      }
+
+    ],
+
+  }
+]

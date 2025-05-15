@@ -32,7 +32,7 @@ const dropdownItems = {
   courses: [
     { name: "Course Grid", path: "/course-grid" },
     { name: "Course List", path: "/course-list" },
-    { name: "Course Details", path: "/course-details" },
+    { name: "Course Details", path: "/courses" },
   ],
   blog: [
     { name: "Blog Standard", path: "/blog-standard" },
