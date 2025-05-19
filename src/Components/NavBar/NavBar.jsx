@@ -24,7 +24,6 @@ const dropdownItems = {
   pages: [
     { name: "AboutUs", path: "/about-us" },
     { name: "Our Team", path: "/our-team" },
-    // { name: "Team Details", path: "/team-details" },
     { name: "Privacy Policy", path: "/privacy-policy" },
     { name: "Terms & Conditions", path: "/terms-conditions" },
     { name: "404 Page", path: "/not-found" },
@@ -35,9 +34,9 @@ const dropdownItems = {
     { name: "Course Details", path: "/courses" },
   ],
   blog: [
-    { name: "Blog Standard", path: "/blog-standard" },
+    { name: "Blog Standard", path: "/blog" },
     { name: "Blog Grid", path: "/blog-grid" },
-    { name: "Blog Details", path: "/blog-details" },
+    { name: "Blog Details", path: "/blog-details/1" },
   ],
 };
 

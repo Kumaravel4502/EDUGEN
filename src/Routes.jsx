@@ -8,7 +8,7 @@ import CourseDetails from "./Components/CourseDetails/CourseDetails";
 import CourseCatalog from "./Components/CourseCatalog/CourseCatalog";
 import BlogStandard from "./Components/BlogStandard/BlogStandard";
 import BlogGrid from "./Components/BlogGrid/BlogGrid";
-import BlogDetail from "./Components/BlogDetail/BlogDetail";
+import BlogDetails from "./Components/Blog Details/BlogDetails";
 import Contact from "./Components/Contact/Contact";
 import NotFound from "./Components/NotFound/NotFound";
 import PrivacyPolicy from "./Components/PrivacyPolicy/PrivacyPolicy";
@@ -31,10 +31,8 @@ const AppRoutes = () => {
 
       {/* Blog routes */}
       <Route path="/blog" element={<RouteWrapper><BlogStandard /></RouteWrapper>} />
-      <Route path="/blog-standard" element={<RouteWrapper><BlogStandard /></RouteWrapper>} />
       <Route path="/blog-grid" element={<RouteWrapper><BlogGrid /></RouteWrapper>} />
-      <Route path="/blog-details/:id" element={<RouteWrapper><BlogDetail /></RouteWrapper>} />
-      <Route path="/blog-details" element={<RouteWrapper><BlogDetail /></RouteWrapper>} />
+      <Route path="/blog-details/:id" element={<RouteWrapper><BlogDetails /></RouteWrapper>} />
 
       {/* Other pages */}
       <Route path="/our-team" element={<RouteWrapper><OurTeam /></RouteWrapper>} />

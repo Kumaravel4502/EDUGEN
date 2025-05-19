@@ -229,7 +229,7 @@ const BlogStandard = () => {
 
                                             {/* Post Title */}
                                             <h2 className="text-xl sm:text-2xl font-bold mb-4 hover:text-[#8A47CB] transition-colors">
-                                                <Link to="#">{post.title}</Link>
+                                                <Link to={`/blog-details/${post.id}`}>{post.title}</Link>
                                             </h2>
 
                                             {/* Post Excerpt */}
@@ -252,7 +252,7 @@ const BlogStandard = () => {
                                             {/* Read More Button */}
                                             <div className="flex">
                                                 <Link
-                                                    to="#"
+                                                    to={`/blog-details/${post.id}`}
                                                     className="relative inline-flex items-center gap-2 px-5 py-2.5 bg-black text-white rounded-md overflow-hidden group hover:bg-[#8A47CB] transition-colors duration-300"
                                                 >
                                                     <span className="relative z-10">Read More</span>
@@ -422,7 +422,7 @@ const BlogStandard = () => {
                                         />
                                         <div>
                                             <h4 className="font-medium text-sm hover:text-[#8A47CB] transition-colors line-clamp-2">
-                                                <Link to="#">{post.title}</Link>
+                                                <Link to={`/blog-details/${post.id}`}>{post.title}</Link>
                                             </h4>
                                             <p className="text-gray-500 text-xs mt-1">{formatDate(post.date)}</p>
                                         </div>
@@ -438,7 +438,7 @@ const BlogStandard = () => {
                                 {allTags.map((tag, index) => (
                                     <Link
                                         key={index}
-                                        to="#"
+                                        to={`/blog?tag=${encodeURIComponent(tag)}`}
                                         className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-md hover:bg-[#8A47CB] hover:text-white transition-colors"
                                     >
                                         {tag}

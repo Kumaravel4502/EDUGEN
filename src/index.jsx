@@ -34,6 +34,7 @@ import {
   BlogStandard,
 } from "./Components";
 import BlogGrid from "./Components/BlogGrid/BlogGrid";
+import BlogDetails from "./Components/Blog Details/BlogDetails";
 
 const HomePage = () => {
   return (
@@ -74,8 +75,12 @@ const Router = createBrowserRouter([
       { path: "/privacy-policy", element: <RouteWrapper><PrivacyPolicy /></RouteWrapper> },
       { path: "/terms-conditions", element: <RouteWrapper><TermsCondition /></RouteWrapper> },
       { path: "/contact", element: <RouteWrapper><Contact /></RouteWrapper> },
+      { path: "/blog", element: <RouteWrapper><BlogStandard /></RouteWrapper> },
       { path: "/blog-standard", element: <RouteWrapper><BlogStandard /></RouteWrapper> },
       { path: "/blog-grid", element: <RouteWrapper><BlogGrid /></RouteWrapper> },
+      { path: "/blog-details", element: <RouteWrapper><BlogDetails /></RouteWrapper> },
+      { path: "/blog-details/:id", element: <RouteWrapper><BlogDetails /></RouteWrapper> },
+      { path: "/404", element: <RouteWrapper><NotFound /></RouteWrapper> },
       { path: "*", element: <RouteWrapper><NotFound /></RouteWrapper> },
     ],
   },
