@@ -81,7 +81,7 @@ const Router = createBrowserRouter([
       { path: "/blog-details", element: <RouteWrapper><BlogDetails /></RouteWrapper> },
       { path: "/blog-details/:id", element: <RouteWrapper><BlogDetails /></RouteWrapper> },
       { path: "/404", element: <RouteWrapper><NotFound /></RouteWrapper> },
-      // { path: "*", element: <RouteWrapper><NotFound /></RouteWrapper> },
+      { path: "*", element: <RouteWrapper><NotFound /></RouteWrapper> },
     ],
   },
 ]);
