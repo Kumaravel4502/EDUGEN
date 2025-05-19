@@ -3,6 +3,7 @@ export const CourseData = [
     id: 1,
     title: "Basic Fundamentals of Interior & Graphics Design",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses1.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
     price: 0, // Free
     lessons: 2,
     students: "4k",
@@ -54,6 +55,8 @@ export const CourseData = [
     id: 2,
     title: "Increasing Engagement with Instagram & Facebook",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses2.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.33,
     lessons: 2,
     students: "4k",
@@ -105,6 +108,8 @@ export const CourseData = [
     id: 3,
     title: "Introduction to Color Theory & Basic UI/UX",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.05,
     lessons: 2,
     students: "4k",
@@ -156,6 +161,8 @@ export const CourseData = [
     id: 4,
     title: "Financial Security Thinking and Principles Theory",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses4.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 0, // Free
     lessons: 2,
     students: "4k",
@@ -207,6 +214,8 @@ export const CourseData = [
     id: 5,
     title: "Logo Design: From Concept to Presentation",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses5.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 10.50,
     lessons: 2,
     students: "4k",
@@ -258,6 +267,8 @@ export const CourseData = [
     id: 6,
     title: "Professional Ceramic Molding for Beginners",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses6.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.33,
     lessons: 2,
     students: "4k",
@@ -309,6 +320,8 @@ export const CourseData = [
     id: 7,
     title: "Introduction to Color Theory & Basic UI/UX",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.05,
     lessons: 2,
     students: "4k",
@@ -361,6 +374,8 @@ export const CourseData = [
     id: 8,
     title: "Introduction to Color Theory & Basic UI/UX",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.05,
     lessons: 2,
     students: "4k",
@@ -412,6 +427,8 @@ export const CourseData = [
     id: 9,
     title: "Introduction to Color Theory & Basic UI/UX",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.05,
     lessons: 2,
     students: "4k",
@@ -464,6 +481,8 @@ export const CourseData = [
     id: 10,
     title: "Basic Fundamentals of Interior & Graphics Design",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses1.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 0, // Free
     lessons: 2,
     students: "4k",
@@ -514,6 +533,8 @@ export const CourseData = [
   {
     id: 11,
     title: "Increasing Engagement with Instagram & Facebook",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses2.jpg",
     price: 24.33,
     lessons: 2,
@@ -566,6 +587,8 @@ export const CourseData = [
     id: 12,
     title: "Introduction to Color Theory & Basic UI/UX",
     image: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses3.jpg",
+    smallImage: "https://demo.themeies.com/edugen/wp-content/uploads/2024/09/courses-user1.jpg",
+
     price: 24.05,
     lessons: 2,
     students: "4k",
