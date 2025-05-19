@@ -9,7 +9,7 @@ const NotFound = () => {
         setIsVisible(true);
         window.scrollTo(0, 0);
 
-      
+
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
         };
@@ -18,19 +18,19 @@ const NotFound = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-   
+
     const getContainerClasses = () => {
-   
+
         if (windowWidth < 380) {
-            return "px-3 py-4 min-h-[calc(100vh-60px)]"; 
+            return "px-3 py-4 min-h-[calc(100vh-60px)]";
         } else if (windowWidth < 640) {
-            return "px-4 py-6 min-h-[calc(100vh-70px)]"; 
+            return "px-4 py-6 min-h-[calc(100vh-70px)]";
         } else if (windowWidth < 768) {
-            return "px-6 py-8 min-h-[calc(100vh-80px)]"; 
+            return "px-6 py-8 min-h-[calc(100vh-80px)]";
         } else if (windowWidth < 1024) {
-            return "px-8 py-10 min-h-[calc(100vh-80px)]"; 
+            return "px-8 py-10 min-h-[calc(100vh-80px)]";
         } else if (windowWidth < 1280) {
-            return "px-10 py-12 min-h-[calc(100vh-80px)]"; 
+            return "px-10 py-12 min-h-[calc(100vh-80px)]";
         } else {
             return "px-12 py-16 min-h-[calc(100vh-80px)]";
         }
