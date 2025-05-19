@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useLoading } from "../../context/LoadingContext";
 import PropTypes from 'prop-types';
 
@@ -183,6 +183,9 @@ const NavBar = () => {
           </div>
 
           {/* Button */}
+
+
+
           <button
             onClick={handleButtonClick}
             disabled={loading.button}
@@ -193,7 +196,9 @@ const NavBar = () => {
                 <LoadingSpinner />
               ) : (
                 <>
-                  Start Free Trial
+                  <Link to="/contact">
+                    Start Free Trial
+                  </Link>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"

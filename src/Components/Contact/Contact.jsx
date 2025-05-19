@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="relative bg-[#FFF7FA] pt-20 pb-12 sm:pt-24 sm:pb-14 md:pt-28 md:pb-16 lg:pt-32 lg:pb-18 overflow-hidden rounded-xl mb-12">
+    <div className="bg-white min-h-screen">
+      {/* Header Section */}
+      <div className="relative bg-[#FFF7FA] pt-20 pb-12 sm:pt-24 sm:pb-14 md:pt-28 md:pb-16 lg:pt-32 lg:pb-18 overflow-hidden rounded-xl mb-12 max-w-6xl mx-auto">
         <div className="relative z-20 text-center px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black">
             Contact Us
@@ -15,7 +16,6 @@ const Contact = () => {
             <span className="text-[#8A47CB] font-semibold"> – Contact </span>
           </p>
         </div>
-
         {/* Decorative elements */}
         <div className="absolute inset-0 z-0">
           <div className="w-[150%] h-[100%] bg-gradient-to-b from-[#F8F8F8] to-transparent rounded-full absolute top-[-75%] left-[-25%]" />
@@ -31,10 +31,12 @@ const Contact = () => {
           className="absolute top-12 right-8 sm:top-16 sm:right-16 w-12 sm:w-16 md:w-20 z-10"
         />
       </div>
-      <div className="2xl:container  px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-xl shadow-lg p-8 md:p-12">
+
+      {/* Contact Card Section */}
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-white rounded-xl shadow-lg p-8 md:p-12">
         {/* Left: Contact Info */}
         <div className="flex flex-col justify-center">
-          <div className="text-sm sub-title font-semibold mb-2">Contact Us</div>
+          <div className="text-sm sub-title font-semibold mb-2 text-blue-500">Contact Us</div>
           <div className="text-3xl font-bold text-black mb-6">
             Get In <span className="text-green-500">Touch</span>
           </div>
@@ -82,8 +84,9 @@ const Contact = () => {
           <button type="submit" className="bg-[#8A47CB] text-white font-semibold py-2 rounded-md hover:bg-[#6C2CA7] transition mt-2">Send Message</button>
         </form>
       </div>
+
       {/* Full-width Map */}
-      <div className="w-full mt-10 rounded-xl overflow-hidden shadow border border-gray-200">
+      <div className="w-full mt-10 rounded-xl overflow-hidden shadow border border-gray-200 max-w-6xl mx-auto">
         <iframe
           title="Edugen Location"
           src="https://www.openstreetmap.org/export/embed.html?bbox=0.0%2C51.3%2C0.3%2C51.6&amp;layer=mapnik"
@@ -95,7 +98,7 @@ const Contact = () => {
         ></iframe>
       </div>
     </div>
-  )
+  );
 };
 
 export default Contact;
